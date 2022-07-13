@@ -18,19 +18,18 @@ const decompressed = inflate(compressed);
 
 ## Test
 
-    deno cache -r https://deno.land/x/denoflate/test.ts
-    deno run --allow-net https://deno.land/x/denoflate/test.ts
+> deno task test
 
 ## Building
-
-- Install wasm-pack
   
-      cargo install wasm-pack
+First, install wasm-pack
 
-- Generate WASM
+```bash
+curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+```
 
-      wasm-pack build --target web --release
+> (From https://rustwasm.github.io/wasm-pack/installer/)
 
-- Pack .wasm to .wasm.js
+Then, run the task:
 
-      deno run -A ./build.ts
+`deno task build`

@@ -1,0 +1,6 @@
+{
+  "tasks": {
+    "test": "deno cache -r https://deno.land/x/denoflate/test.ts && deno run --allow-net https://deno.land/x/denoflate/test.ts",
+    "build": "wasm-pack build --target web --release && deno run --allow-read=./ --allow-write=./ ./build.ts"
+  }
+}
